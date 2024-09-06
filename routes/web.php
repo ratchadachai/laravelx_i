@@ -186,3 +186,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+use App\Http\Controllers\LicenseController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VehicleController;
+
+Route::resource('license', LicenseController::class);
+Route::resource('user', UserController::class);
+Route::resource('vehicle', VehicleController::class);
